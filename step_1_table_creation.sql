@@ -491,6 +491,9 @@ REFERENCES ACCOUNT
 )
 ENABLE;
 
+ALTER TABLE JOURNAL_LINE  
+MODIFY (DESCRIPTION VARCHAR2(100 BYTE) );
+
 alter table JOURNAL_LINE
 modify JRNL_LINE_NO generated always as identity restart start with 1;
 
