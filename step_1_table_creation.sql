@@ -576,6 +576,9 @@ REFERENCES ACCOUNT
 )
 ENABLE;
 
+ALTER TABLE LEDGER  
+MODIFY (TRANSACTION_FLAG VARCHAR2(20) );
+
 alter table LEDGER
 modify LEDGER_ID generated always as identity restart start with 1;
 
