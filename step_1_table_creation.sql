@@ -565,6 +565,17 @@ REFERENCES ACCOUNT
 )
 ENABLE;
 
+ALTER TABLE LEDGER
+ADD CONSTRAINT LEDGER_FK3 FOREIGN KEY
+(
+  ACCOUNT_ID 
+)
+REFERENCES ACCOUNT
+(
+  ACCOUNT_ID 
+)
+ENABLE;
+
 alter table LEDGER
 modify LEDGER_ID generated always as identity restart start with 1;
 
