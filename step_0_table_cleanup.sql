@@ -13,7 +13,7 @@ begin
        from USER_TABLES
        where TABLE_NAME=i.table_name;
 
-       v_sql := 'drop table '||i.table_name;
+       v_sql := 'drop table '||i.table_name ||' cascade constraints';
        execute immediate v_sql;
        dbms_output.put_line('........Table '||i.table_name||' dropped successfully');
        
@@ -27,4 +27,3 @@ exception
    when others then
       dbms_output.put_line('Failed to execute code:'||sqlerrm);
 end;
-/
