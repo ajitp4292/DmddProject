@@ -1,15 +1,6 @@
-SET DEFINE OFF
-INSERT INTO ADMIN.VENDOR (VENDOR_NAME, ACC_NUM, STATUS, PAYMENT_METHOD, USER_ID, CURRENCY) 
-VALUES ('Costco', 1201301200, 'A', 'cash', 3, 'USD');
-INSERT INTO ADMIN.VENDOR (VENDOR_NAME, ACC_NUM, STATUS, PAYMENT_METHOD, USER_ID, CURRENCY) 
-VALUES ('Walmart', 1201301201, 'A', 'cash', 8, 'USD');
-INSERT INTO ADMIN.VENDOR (VENDOR_NAME, ACC_NUM, STATUS, PAYMENT_METHOD, USER_ID, CURRENCY) 
-VALUES ('Wayfair', 1201301202, 'A', 'cash', 9, 'USD');
-INSERT INTO ADMIN.VENDOR (VENDOR_NAME, ACC_NUM, STATUS, PAYMENT_METHOD, USER_ID, CURRENCY) 
-VALUES ('Pricerite', 1201301203, 'A', 'cheque', 10, 'USD');
-INSERT INTO ADMIN.VENDOR (VENDOR_NAME, ACC_NUM, STATUS, PAYMENT_METHOD, USER_ID, CURRENCY) 
-VALUES ('BestBuy', 1201301204, 'A', 'cheque', 11, 'USD');
-INSERT INTO ADMIN.VENDOR (VENDOR_NAME, ACC_NUM, STATUS, PAYMENT_METHOD, USER_ID, CURRENCY) 
-VALUES ('Staples', 1201301205, 'A', 'cheque', 12, 'USD');
-
-COMMIT;
+exec pms.usp_vendor_data('Costco', 1201301200, 'A', 'cash', 3, 'USD','Maple Ave', 'MA', 3640, 'A',8573130202, 'janedoe@gmail.com', 'A')
+exec pms.usp_vendor_data('Walmart', 1201301201, 'A', 'cash', 8, 'USD','Cherry Street', 'MA', 4851, 'A',8574142325, 'DougM@yahoo.com', 'A')
+exec pms.usp_vendor_data('Wayfair', 1201301202, 'A', 'cash', 9, 'USD','Birch Ave', 'MA', 4951, 'A',8574142326, 'NeerajShah@hotmail.com', 'A')
+exec pms.usp_vendor_data('Pricerite', 1201301203, 'A', 'cheque', 10, 'USD','Mission park', 'MA', 41051, 'A',8574142327, 'Joseph@outlook.com', 'A')
+exec pms.usp_vendor_data('BestBuy', 1201301204, 'A', 'cheque', 11, 'USD' , 'Spruce Street', 'MA', 41151, 'A',8574142328, 'coriebarry@gmail.com', 'A')
+exec pms.usp_vendor_data('Staples', 1201301205, 'A', 'cheque', 12, 'USD','Peach street', 'MA', 41251, 'A',8574142329, 'JohnLed@yahoo.com', 'A')

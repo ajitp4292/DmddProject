@@ -1,41 +1,18 @@
-SET DEFINE OFF
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Dell_Laptop', 'Pavilion_edition');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Non - goods', 'Xerox_machine', 'BlackWhite');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Dell_Notebook', 'PavilionX_edition');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Macbook', 'Air');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Macbook', 'Pro');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'iPad', 'Pro');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'iPad', 'Air');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'ASUS_notebook', 'LightSeries');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'ASUS_thinkpad', 'Useries');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Lenovo_Laptop', 'Touchscreen');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Lenovo_tab', 'Yogoseries');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'HP_laptop', '360Series');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'HP_Printers', 'Colour');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Non - goods', 'chair', 'furniture');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Non - goods', 'desk', 'furniture');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Non - goods', 'Locker', 'furniture');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Microsoft_laptop', 'Kseries');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'Samsung_Laptop', 'Pro');
-INSERT INTO ADMIN.ITEM (CATEGORY_NAME, ITEM_NAME, ITEM_DESC) 
-VALUES ('Goods', 'TV', 'OLED');
-
-COMMIT;
+exec pms.usp_item_data('Goods', 'Dell_Laptop', 'Pavilion_edition');
+exec pms.usp_item_data ('Non - goods', 'Xerox_machine', 'BlackWhite');
+exec pms.usp_item_data('Goods', 'Dell_Notebook', 'PavilionX_edition');
+exec pms.usp_item_data('Goods', 'Macbook', 'Pro');
+exec pms.usp_item_data('Goods' , 'iPad', 'Pro');
+exec pms.usp_item_data('Goods', 'iPad', 'Air');
+exec pms.usp_item_data('Goods', 'ASUS_notebook', 'LightSeries');
+exec pms.usp_item_data('Goods', 'ASUS_thinkpad', 'Useries');
+exec pms.usp_item_data('Goods', 'Lenovo_Laptop', 'Touchscreen');
+exec pms.usp_item_data('Goods', 'Lenovo_tab', 'Yogoseries');
+exec pms.usp_item_data('Goods', 'HP_laptop', '360Series');
+exec pms.usp_item_data('Goods', 'HP_Printers', 'Colour');
+exec pms.usp_item_data('Non - goods', 'chair', 'furniture');
+exec pms.usp_item_data('Non - goods', 'desk', 'furniture');
+exec pms.usp_item_data('Non - goods', 'Locker', 'furniture');
+exec pms.usp_item_data('Goods', 'Microsoft_laptop', 'Kseries');
+exec pms.usp_item_data('Goods', 'Samsung_Laptop', 'Pro');
+exec pms.usp_item_data('Goods', 'TV', 'OLED');
