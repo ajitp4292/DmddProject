@@ -831,5 +831,167 @@ Grant CREATE SESSION to  vendor_user_Staples;
 Grant CREATE SESSION to  PMS;
 
 
+--User data creation
+
+exec pms.usp_user_data('requestor_user','REQUESTOR','Hugh','Jackman','Main Street','MA', 2115,'A',8573130698, 'hughjackman@gmail.com', 'A');
+
+exec pms.usp_user_data('procurement_analyst_user','PROCUREMENT_ANALYST','Nicole','Kidman','Elm Street', 'MA', 2215, 'A',8514540231, 'Nicole@hotmail.com', 'A');
+
+exec pms.usp_user_data('vendor_user','VENDOR','Jane','Doe','Maple Ave', 'MA', 3640, 'A',8573130202, 'janedoe@gmail.com', 'A');
+
+exec pms.usp_user_data ('accountant_user','ACCOUNTANT','Johnny','Evans','Oak Street', 'MA', 5501, 'A',8573130605, 'Jonny@yahoo.com', 'A');
+
+exec pms.usp_user_data   ('finance_officer_user','FINANCE_OFFICER','Chris','Hemsworth','Pine St', 'MA', 1125, 'A',8546160202, 'Chrishems@hotmail.com', 'A');
+
+exec pms.usp_user_data   ('user_admin_user','USER_ADMIN','Jessica','Chastian','Cedar Rd', 'MA', 9874, 'A',8574142323, 'jessica@yahoo.com', 'A');
+
+exec pms.usp_user_data   ('inventory_admin_user','INVENTORY_ADMIN','Ajith','Patil','Chestnut St', 'MA', 4751, 'A',8574142324, 'AjitPatil@gmail.com', 'A',);
+
+exec pms.usp_user_data  ('vendor_user_Walmart','VENDOR','Doug','Mcmillon','Cherry Street', 'MA', 4851, 'A',8574142325, 'DougM@yahoo.com', 'A');
+
+exec pms.usp_user_data  ('vendor_user_Wayfair','VENDOR','Neeraj','Shah','Birch Ave', 'MA', 4951, 'A',8574142326, 'NeerajShah@hotmail.com', 'A');
+
+exec pms.usp_user_data ('vendor_user_Pricerite','VENDOR','Joseph','Colalillo','Mission park', 'MA', 41051, 'A',8574142327, 'Joseph@outlook.com', 'A');
+
+exec pms.usp_user_data  ('vendor_user_BestBuy','VENDOR','Corie','Barry','Spruce Street', 'MA', 41151, 'A'8574142328, 'coriebarry@gmail.com', 'A');
+
+exec pms.usp_user_data ('vendor_user_Staples','VENDOR','John','Lederer', 'Peach street', 'MA', 41251, 'A',8574142329, 'JohnLed@yahoo.com', 'A',);
+
+--Item Insert
+
+exec pms.usp_item_data('Goods', 'Dell_Laptop', 'Pavilion_edition');
+exec pms.usp_item_data ('Non - goods', 'Xerox_machine', 'BlackWhite');
+exec pms.usp_item_data('Goods', 'Dell_Notebook', 'PavilionX_edition');
+exec pms.usp_item_data('Goods', 'Macbook', 'Pro');
+exec pms.usp_item_data('Goods' , 'iPad', 'Pro');
+exec pms.usp_item_data('Goods', 'iPad', 'Air');
+exec pms.usp_item_data('Goods', 'ASUS_notebook', 'LightSeries');
+exec pms.usp_item_data('Goods', 'ASUS_thinkpad', 'Useries');
+exec pms.usp_item_data('Goods', 'Lenovo_Laptop', 'Touchscreen');
+exec pms.usp_item_data('Goods', 'Lenovo_tab', 'Yogoseries');
+exec pms.usp_item_data('Goods', 'HP_laptop', '360Series');
+exec pms.usp_item_data('Goods', 'HP_Printers', 'Colour');
+exec pms.usp_item_data('Non - goods', 'chair', 'furniture');
+exec pms.usp_item_data('Non - goods', 'desk', 'furniture');
+exec pms.usp_item_data('Non - goods', 'Locker', 'furniture');
+exec pms.usp_item_data('Goods', 'Microsoft_laptop', 'Kseries');
+exec pms.usp_item_data('Goods', 'Samsung_Laptop', 'Pro');
+exec pms.usp_item_data('Goods', 'TV', 'OLED');
+
+--Vendor data insert
+exec pms.usp_vendor_data('Costco', 1201301200, 'A', 'cash', 3, 'USD','Maple Ave', 'MA', 3640, 'A',8573130202, 'janedoe@gmail.com', 'A')
+exec pms.usp_vendor_data('Walmart', 1201301201, 'A', 'cash', 8, 'USD','Cherry Street', 'MA', 4851, 'A',8574142325, 'DougM@yahoo.com', 'A')
+exec pms.usp_vendor_data('Wayfair', 1201301202, 'A', 'cash', 9, 'USD','Birch Ave', 'MA', 4951, 'A',8574142326, 'NeerajShah@hotmail.com', 'A')
+exec pms.usp_vendor_data('Pricerite', 1201301203, 'A', 'cheque', 10, 'USD','Mission park', 'MA', 41051, 'A',8574142327, 'Joseph@outlook.com', 'A')
+exec pms.usp_vendor_data('BestBuy', 1201301204, 'A', 'cheque', 11, 'USD' , 'Spruce Street', 'MA', 41151, 'A',8574142328, 'coriebarry@gmail.com', 'A')
+exec pms.usp_vendor_data('Staples', 1201301205, 'A', 'cheque', 12, 'USD','Peach street', 'MA', 41251, 'A',8574142329, 'JohnLed@yahoo.com', 'A')
+
+--Item Vendor data insert
+exec pms.usp_item_vendor_data (1, 1, 500, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+exec pms.usp_item_vendor_data(2, 5, 5000, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+exec pms.usp_item_vendor_data(3, 6, 300, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+exec pms.usp_item_vendor_data(4, 1, 1000, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+exec pms.usp_item_vendor_data(5, 5, 800, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(6, 1, 750, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(7, 1, 400, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(8, 4, 250, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(9, 1, 250, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(10, 2, 850, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(11, 1, 850, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+exec pms.usp_item_vendor_data (12, 3, 500, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(13, 3, 1000, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+exec pms.usp_item_vendor_data (14, 1, 500, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(15, 1, 500, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(16, 5, 500, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+ exec pms.usp_item_vendor_data(17, 2, 600, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'));
+exec pms.usp_item_vendor_data(9, 5, 250, 1, to_date('01-JAN-23', 'DD-MON-RR'), to_date('23-MAR-23', 'DD-MON-RR'))
+
+
+-- Update Requesition header status to approved & Purchase Order insert
+
+exec pms.usp_approve_requisition(1);
+exec pms.usp_approve_requisition(2);
+exec pms.usp_approve_requisition(3);
+exec pms.usp_approve_requisition(4);
+exec pms.usp_approve_requisition(5);
+exec pms.usp_approve_requisition(6);
+exec pms.usp_approve_requisition(7);
+exec pms.usp_approve_requisition(8);
+exec pms.usp_approve_requisition(9);
+
+-- Purchase Order Line Insert
+exec pms.usp_po_line_data (1, 1);
+
+exec pms.usp_po_line_data (1, 2);
+
+exec pms.usp_po_line_data (2, 3);
+
+exec pms.usp_po_line_data (3, 4);
+ 
+exec pms.usp_po_line_data (4, 5);
+
+exec pms.usp_po_line_data (4, 6);
+
+exec pms.usp_po_line_data (5, 7);
+
+exec pms.usp_po_line_data (6, 8);
+
+exec pms.usp_po_line_data (6, 9);
+
+exec pms.usp_po_line_data (7, 10);
+
+exec pms.usp_po_line_data (7, 11);
+
+exec pms.usp_po_line_data (8, 12);
+
+exec pms.usp_po_line_data (9, 13);
+
+exec pms.usp_po_line_data (10, 14);
+
+exec pms.usp_po_line_data (11, 15);
+
+-- Update Purchase Order status to completed
+exec pms.usp_po_header_status_update(1,'completed')
+exec pms.usp_po_header_status_update(2,'completed')
+exec pms.usp_po_header_status_update(3,'completed')
+exec pms.usp_po_header_status_update(4,'completed')
+exec pms.usp_po_header_status_update(5,'completed')
+exec pms.usp_po_header_status_update(6,'completed')
+exec pms.usp_po_header_status_update(7,'completed')
+exec pms.usp_po_header_status_update(8,'completed')
+exec pms.usp_po_header_status_update(9,'completed')
+exec pms.usp_po_header_status_update(10,'completed')
+exec pms.usp_po_header_status_update(11,'completed')
+
+--Voucher Data insert
+
+exec pms.usp_voucher_data(1,'UNPAID');
+exec pms.usp_voucher_data(2,'UNPAID');
+exec pms.usp_voucher_data(3,'UNPAID');
+exec pms.usp_voucher_data(4,'UNPAID');
+exec pms.usp_voucher_data(5,'UNPAID');
+exec pms.usp_voucher_data(6,'UNPAID');
+exec pms.usp_voucher_data(7,'UNPAID');
+exec pms.usp_voucher_data(8,'UNPAID');
+exec pms.usp_voucher_data(9,'UNPAID');
+exec pms.usp_voucher_data(10,'UNPAID');
+exec pms.usp_voucher_data(11,'UNPAID');
+
+
+exec pms.usp_update_voucher_status(1,'PAID');
+exec pms.usp_update_voucher_status(2,'PAID');
+exec pms.usp_update_voucher_status(3,'PAID');
+exec pms.usp_update_voucher_status(4,'PAID');
+exec pms.usp_update_voucher_status(5,'PAID');
+exec pms.usp_update_voucher_status(6,'PAID');
+exec pms.usp_update_voucher_status(7,'PAID');
+exec pms.usp_update_voucher_status(8,'PAID');
+exec pms.usp_update_voucher_status(9,'PAID');
+exec pms.usp_update_voucher_status(10,'PAID');
+exec pms.usp_update_voucher_status(11,'PAID');
+
+
+
+
 
 
