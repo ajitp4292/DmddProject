@@ -421,7 +421,7 @@ REFERENCES INVOICE
 )
 ENABLE;
 
-alter table VOUCHER
+alter table pms.VOUCHER
 modify VOUCHER_ID generated always as identity restart start with 1;
 
 /* Journal Header */
